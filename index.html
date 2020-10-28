@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz Test</title>
+    <link rel="stylesheet" href="css/styles.css">
+    
+</head>
+<body>
+   <div class="container">
+        <div id="home" class="flex-center flex-column">
+        
+        <h1>General Quiz</h1>
+        <h3>Number of Questions?</h3>
+        <select id="questAmt">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50">50</option>-->
+        </select>
+        <a class="btn" href="game.html" id="play">Play</a><br>
+        <a class="btn" href="highscore.html">High Score</a>
+    </div>
+</div>
+<script> 
+    document.getElementById("play").addEventListener("click", questNumAmt);
+    /*Stores the chosen option into local storage for use by main JS script*/
+    function questNumAmt(){
+    const id = document.getElementById("questAmt").value;
+    const numberAsInt = parseInt(id);
+    localStorage.setItem('numberAsInt', numberAsInt);
+    }   
+</script>
+</body>
+</html>
